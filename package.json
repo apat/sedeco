@@ -1,0 +1,32 @@
+{
+  "name": "sedeco",
+  "version": "0.0.1",
+  "description": "Generates the historical prices of the food basket",
+  "scripts": {
+    "download": "ts-node src/download.ts",
+    "csv": "ts-node src/pdfToCsv.ts",
+    "build": "npm run download && npm run csv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "precios",
+    "canasta",
+    "mexico"
+  ],
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@types/node": "^20.11.13",
+    "@types/request": "^2.48.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "fs": "^0.0.1-security",
+    "moment": "^2.30.1",
+    "node-fetch": "^3.3.2",
+    "pdf-table-extractor": "^1.0.3",
+    "pdf-text-extract": "^1.5.0"
+  }
+}
